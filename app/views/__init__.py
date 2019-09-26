@@ -15,7 +15,8 @@ def heartbeat():
         }
     )
 
-@app.route("/sum", methods = ['GET', 'POST'])
+
+@app.route("/sum", methods = ['POST'])
 def sum():
     data = request.json
     x = int(data['x'])
@@ -24,14 +25,14 @@ def sum():
     result = {x + y}
     return json.dumps({'Sum': result})
 
-@app.route("/minimum", methods = ['GET', 'POST'])
+@app.route("/minimum", methods = ['POST'])
 def minimum():
     data = request.json
     values = data['values']
     result = min(values)
     return json.dumps({'Minimum': result})
 
-@app.route("/product", methods = ['GET', 'POST'])
+@app.route("/product", methods = ['POST'])
 def product():
     data = request.json
     values = data['values']

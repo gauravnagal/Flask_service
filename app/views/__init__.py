@@ -2,6 +2,7 @@ from app import flask_app as app
 import json
 from datetime import datetime
 import numpy as np
+from flask import request
 
 
 @app.route("/heartbeat")

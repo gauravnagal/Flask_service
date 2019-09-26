@@ -35,7 +35,7 @@ def sum():
 
     return json.dumps(results)
 
-@app.route("/minimum", methods = ['GET', 'POST'])
+@app.route("/minimum")
 def minimum():
     data = request.json
     values = data['values']

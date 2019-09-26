@@ -18,12 +18,22 @@ def heartbeat():
 
 @app.route("/sum", methods = ['GET', 'POST'])
 def sum():
-    data = request.json
-    x = int(data['x'])
-    y = int(data['y'])
-    
-    result = {x + y}
-    return json.dumps({'Sum': result})
+    form = request.form
+    print(form)
+    x = form.get("x")
+    y = form.get("y")
+
+    x = int(x)
+    y = int(y)
+
+    print(x)
+    print(y)
+
+    results = {
+        "result": x + y
+    }
+
+    return json.dumps(results)
 
 @app.route("/minimum", methods = ['GET', 'POST'])
 def minimum():

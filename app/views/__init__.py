@@ -16,7 +16,7 @@ def heartbeat():
     )
 
 
-@app.route("/sum", methods = ['GET', 'POST'])
+@app.route("/sum", methods = ['POST'])
 def sum():
     form = request.form
     print(form)
